@@ -10,3 +10,13 @@
     <li>MySQL Driver</li>
   <li>Lombok</li>
 </ul>
+
+<h3> packages </h3>
+
+<ul>
+  <li> controller </li>
+  <li> entite </li>
+  <li> repository </li>
+  <li> serviceImpl </li>
+   <li> serviceInterface </li> 
+</ul>
