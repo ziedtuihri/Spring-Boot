@@ -41,6 +41,8 @@ public class Bloc {
 
     // One Bloc can have many Chambres (Rooms), this will likely require a OneToMany mapping in the Foyer class or another related class.
 
+
+to add swagger add the code below on the file pom.xml
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
@@ -49,7 +51,3 @@ public class Bloc {
 }
 ````
 
-<h3> to add swagger add the code below on the file pom.xml </h3>
-````
-
-````
