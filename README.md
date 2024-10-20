@@ -44,10 +44,10 @@ public class Bloc {
 ````
 
 <h3> to add swagger add the code below on the file pom.xml </h3>
-<pre>
-          <dependency>
+````
+        <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>2.1.0</version>
         </dependency>
-</pre>
+````
