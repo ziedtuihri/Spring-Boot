@@ -40,14 +40,16 @@ public class Bloc {
     Foyer foyer; // Reference to the `Foyer` entity that this Bloc belongs to.
 
     // One Bloc can have many Chambres (Rooms), this will likely require a OneToMany mapping in the Foyer class or another related class.
-}
-````
 
-<h3> to add swagger add the code below on the file pom.xml </h3>
-````
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>2.1.0</version>
         </dependency>
+}
+````
+
+<h3> to add swagger add the code below on the file pom.xml </h3>
+````
+
 ````
