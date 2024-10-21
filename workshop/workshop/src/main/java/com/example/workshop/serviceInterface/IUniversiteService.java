@@ -10,7 +10,7 @@ public interface IUniversiteService {
 
     FoyerRepository foyerRepo = null;
 
-    List<Universite> retrieveAllUniversite();
+    List<Universite> retrieveAllUniversites();
 
     Universite addUniversite (Universite c);
 

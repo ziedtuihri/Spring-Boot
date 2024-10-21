@@ -23,7 +23,6 @@ public class Foyer {
     String nomFoyer;
     long capaciteFoyer;
 
-    /*
     // Many Foyers belong to one Universite
     @OneToOne(mappedBy = "foyer")
     Universite universite;
@@ -32,6 +31,5 @@ public class Foyer {
     @OneToMany(mappedBy = "foyer")
     List<Bloc> blocs;
 
-    */
 
 }

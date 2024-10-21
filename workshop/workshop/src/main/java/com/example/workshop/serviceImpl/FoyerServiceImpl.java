@@ -12,30 +12,30 @@ import java.util.List;
 @AllArgsConstructor
 public class FoyerServiceImpl implements IFoyerService {
 
-    private FoyerRepository fRepository;
+    private FoyerRepository foyerRepository;
 
     @Override
     public List<Foyer> retrieveAllFoyers() {
-        return fRepository.findAll();
+        return foyerRepository.findAll();
     }
 
     @Override
     public Foyer addFoyer(Foyer f) {
-        return fRepository.save(f);
+        return foyerRepository.save(f);
     }
 
     @Override
     public Foyer updateFoyer(Foyer f) {
-        return fRepository.save(f);
+        return foyerRepository.save(f);
     }
 
     @Override
     public Foyer retrieveFoyer(long idFoyer) {
-        return fRepository.findById(idFoyer).orElse(null);
+        return foyerRepository.findById(idFoyer).orElse(null);
     }
 
     @Override
     public void removeFoyer(long idFoyer) {
-        fRepository.deleteById(idFoyer);
+        foyerRepository.deleteById(idFoyer);
     }
 }

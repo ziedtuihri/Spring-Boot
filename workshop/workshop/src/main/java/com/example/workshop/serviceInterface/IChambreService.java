@@ -8,15 +8,15 @@ import java.util.List;
 
 public interface IChambreService {
 
-    List<Chambre> retrieveAllFoyers();
+    List<Chambre> retrieveAllChambres();
 
-    Chambre addFoyer (Chambre c);
+    Chambre addChambre (Chambre c);
 
-    Chambre updateFoyer (Chambre c);
+    Chambre updateChambre (Chambre c);
 
-    Chambre retrieveFoyer (long  idChambre);
+    Chambre retrieveChambre (long  idChambre);
 
-    void removeFoyer (long idChambre);
+    void removeChambre (long idChambre);
 
     public Bloc affecterChambresABloc(List<Long> numChambre, long idBloc) ;
 

@@ -6,17 +6,15 @@ import java.util.List;
 
 public interface IBlocService {
 
-    List<Bloc> retrieveAllBloc();
+    List<Bloc> retrieveAllBlocs();
 
     Bloc retrieveBloc (long  idBloc);
 
-    Bloc addFoyer (Bloc b);
+    Bloc addBloc (Bloc b);
 
-    Bloc updateFoyer (Bloc b);
+    Bloc updateBloc (Bloc b);
 
-    Bloc retrieveFoyer (long  idBloc);
-
-    void removeFoyer (long idBloc);
+    void removeBloc (long idBloc);
 
     List<Bloc> getBlocByNameUniv(String name);
 
