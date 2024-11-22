@@ -8,6 +8,7 @@ import lombok.experimental.FieldDefaults;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -27,6 +28,6 @@ public class Reservation {
 
     // Many Reservations belong to one Etudiant
     @ManyToMany
-    List<Etudiant> etudiants;
+    Set<Etudiant> etudiants;
 
 }

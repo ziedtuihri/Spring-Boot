@@ -2,6 +2,7 @@ package com.example.workshop.serviceImpl;
 
 import com.example.workshop.entite.Foyer;
 import com.example.workshop.entite.Universite;
+import com.example.workshop.repository.FoyerRepository;
 import com.example.workshop.repository.UniversiteRepository;
 import com.example.workshop.serviceInterface.IUniversiteService;
 import lombok.AllArgsConstructor;
@@ -14,6 +15,8 @@ import java.util.List;
 public class UniversiteServiceImpl implements IUniversiteService {
 
     private UniversiteRepository universiteRepository;
+
+    private FoyerRepository foyerRepository;
 
     @Override
     public List<Universite> retrieveAllUniversites() {
@@ -48,5 +51,21 @@ public class UniversiteServiceImpl implements IUniversiteService {
     @Override
     public Foyer ajouterFoyerEtAffecterAUniversite(Foyer foyer, long idUniversite) {
         return null;
+    }
+
+    @Override
+    public Universite desaffecterFoyerAUniversite(long idUniversite) {
+        Universite universite = universiteRepository.findById(idUniversite).orElse(null);
+        // Foyer foyer = foyerRepository.findById(idFoyer).orElse(null);
+        universite.setFoyer(null);
+        return  universiteRepository.save(universite);
+    }
+
+    @Override
+    public Universite affecterFoyerAUniversite(long idFoyer, String nomUniversite) {
+        Foyer foyer = foyerRepository.findById(idFoyer).orElse(null);
+        Universite universite = universiteRepository.findByNomUniversiteLike(nomUniversite);
+        universite.setFoyer(foyer);
+        return universiteRepository.save(universite);
     }
 }

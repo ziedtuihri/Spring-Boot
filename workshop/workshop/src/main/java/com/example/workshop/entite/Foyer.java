@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -29,7 +30,8 @@ public class Foyer {
 
     // One Foyer has many Blocs
     @OneToMany(mappedBy = "foyer")
-    List<Bloc> blocs;
+    List<Bloc> blocs = new ArrayList<>();
+
 
 
 }

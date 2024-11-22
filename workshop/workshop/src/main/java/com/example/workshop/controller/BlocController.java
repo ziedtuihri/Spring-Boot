@@ -15,31 +15,5 @@ public class BlocController {
 
     IBlocService blocService;
 
-    @GetMapping("/retrieveAllBlocs")
-    public List<Bloc> retrieveAllBlocs() {
-        return blocService.retrieveAllBlocs();
-    }
-
-    @GetMapping("/findBloc/{idBloc}")
-    public Bloc retrieveBloc(@PathVariable long idBloc) {
-        return blocService.retrieveBloc(idBloc);
-    }
-
-    @PostMapping("/addBloc")
-    public Bloc addBloc(@RequestBody Bloc b) {
-        return blocService.addBloc(b);
-    }
-
-    @PutMapping("/updateBloc")
-    public Bloc updateBloc(@RequestBody Bloc b) {
-        return blocService.updateBloc(b);
-    }
-
-
-    @DeleteMapping("removeBloc/{idBloc}")
-    public void removeBloc(@PathVariable long idBloc) {
-        blocService.removeBloc(idBloc);
-    }
-
 
 }

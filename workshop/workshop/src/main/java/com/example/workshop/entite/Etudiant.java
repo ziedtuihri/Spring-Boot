@@ -5,6 +5,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -28,5 +29,7 @@ public class Etudiant {
 
     // One Etudiant can have many Reservations
     @ManyToMany(mappedBy = "etudiants")
-    List<Reservation> reservations;
+    List<Reservation> reservations = new ArrayList<>();
+
+
 }

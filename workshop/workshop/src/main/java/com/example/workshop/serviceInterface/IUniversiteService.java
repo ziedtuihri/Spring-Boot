@@ -24,4 +24,8 @@ public interface IUniversiteService {
 
     public Foyer ajouterFoyerEtAffecterAUniversite (Foyer foyer, long idUniversite) ;
 
+    public Universite desaffecterFoyerAUniversite (  long idUniversite) ;
+
+    public Universite affecterFoyerAUniversite (long idFoyer, String nomUniversite) ;
+
 }

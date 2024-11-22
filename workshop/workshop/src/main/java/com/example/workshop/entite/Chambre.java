@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+import java.util.ArrayList;
 import java.util.List;
 
 //@Table(name = "ChambreTable")
@@ -32,6 +33,8 @@ public class Chambre {
 
     // One Chambre has many Reservations
     @OneToMany
-    List<Reservation> reservations;
+    List<Reservation> reservations = new ArrayList<>();
+
+
 
 }

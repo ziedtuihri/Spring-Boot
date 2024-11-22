@@ -7,4 +7,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface FoyerRepository extends JpaRepository<Foyer, Long> {
+
+    Foyer findByUniversiteIdUniversite(Long idUniversite);
+
 }

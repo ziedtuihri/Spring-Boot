@@ -15,31 +15,6 @@ import java.util.List;
 public class EtudiantController {
 
     IEtudiantService etudiantService;
-    @GetMapping("/retrieveAllEtudiants")
-    public List<Etudiant> retrieveAllEtudiants() {
-        return etudiantService.retrieveAllEtudiants();
-    }
-
-    @GetMapping("/findEtudiant/{idEtudiant}")
-    public Etudiant retrieveEtudiant(@PathVariable long idEtudiant) {
-        return etudiantService.retrieveEtudiant(idEtudiant);
-    }
-
-    @PostMapping("/addEtudiant")
-    public Etudiant addEtudiant(@RequestBody Etudiant f) {
-        return etudiantService.addEtudiant(f);
-    }
-
-    @PutMapping("/updateEtudiant")
-    public Etudiant updateEtudiant(@RequestBody Etudiant f) {
-        return etudiantService.updateEtudiant(f);
-    }
-
-
-    @DeleteMapping("removeEtudiant/{idEtudiant}")
-    public void removeEtudiant(@PathVariable long idEtudiant) {
-        etudiantService.removeEtudiant(idEtudiant);
-    }
 
 
 }

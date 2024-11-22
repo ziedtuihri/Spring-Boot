@@ -17,29 +17,6 @@ public class ChambreController {
 
     IChambreService chambreService;
 
-    @GetMapping("/retrieveAllChambres")
-    public List<Chambre> retrieveAllChambres() {
-        return chambreService.retrieveAllChambres();
-    }
 
-    @GetMapping("/findChambre/{idChambre}")
-    public Chambre retrieveChambre(@PathVariable long idChambre) {
-        return chambreService.retrieveChambre(idChambre);
-    }
-
-    @PostMapping("/addChambre")
-    public Chambre addChambre(@RequestBody Chambre f) {
-        return chambreService.addChambre(f);
-    }
-
-    @PutMapping("/updateChambre")
-    public Chambre updateChambre(@RequestBody Chambre f) {
-        return chambreService.updateChambre(f);
-    }
-
-    @DeleteMapping("removeChambre/{idChambre}")
-    public void removeChambre(@PathVariable long idChambre) {
-        chambreService.removeChambre(idChambre);
-    }
 
 }

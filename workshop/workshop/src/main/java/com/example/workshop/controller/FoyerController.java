@@ -13,32 +13,6 @@ import java.util.List;
 public class FoyerController {
 
     IFoyerService iFoyerService;
-    @GetMapping("/retrieveAllFoyers")
-    public List<Foyer> retrieveAllFoyers() {
-        return iFoyerService.retrieveAllFoyers();
-    }
-
-    @GetMapping("/findFoyer/{idFoyer}")
-    public Foyer retrieveFoyer(@PathVariable long idFoyer) {
-        return iFoyerService.retrieveFoyer(idFoyer);
-    }
-
-    @PostMapping("/addFoyer")
-    public Foyer addFoyer(@RequestBody Foyer f) {
-        return iFoyerService.addFoyer(f);
-    }
-
-    @PutMapping("/updateFoyer")
-    public Foyer updateFoyer(@RequestBody Foyer f) {
-        return iFoyerService.updateFoyer(f);
-    }
-
-
-    @DeleteMapping("removeFoyer/{idFoyer}")
-    public void removeFoyer(@PathVariable long idFoyer) {
-        iFoyerService.removeFoyer(idFoyer);
-    }
-
 
 
 }
